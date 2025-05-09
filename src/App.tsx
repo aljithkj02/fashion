@@ -3,9 +3,8 @@ import AboutCourse from "./components/AboutCourse"
 import CTA from "./components/CTA"
 // import CTASection from "./components/CTASection"
 import Header from "./components/Header"
-// import HeroSection from "./components/HeroSection"
+import HeroSection from "./components/HeroSection"
 import PreviewVideo from "./components/PreviewVideo"
-
 
 function App() {
 
@@ -13,7 +12,7 @@ function App() {
     <>
     <main className="bg-black text-white font-body">
       <Header />
-      {/* <HeroSection /> */}
+      <HeroSection />
       <PreviewVideo  />
       <AboutCourse />
       <CTA />
