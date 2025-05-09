@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const HeroSection: React.FC = () => {
     return (
-        <section className="mt-15 relative min-h-screen bg-black text-white flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+        <section className="mt-0 md:mt-15 relative min-h-screen bg-black text-white flex flex-col items-center justify-center text-center px-6 overflow-hidden">
             {/* Stylish gradient overlay */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black via-gray-900 to-neutral-900 opacity-90 z-0" />
 

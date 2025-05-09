@@ -18,7 +18,7 @@ const PreviewVideo = () => {
                 <video
                     controls
                     className="w-full h-full object-cover"
-                // poster="/thumbnail.jpg"
+                    poster="https://res.cloudinary.com/dquq0mrkt/image/upload/v1746788211/Reel_Cover_c02ruk.jpg"
                 >
                     <source src="https://res.cloudinary.com/dquq0mrkt/video/upload/v1746607729/fashion_s3llhe.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
