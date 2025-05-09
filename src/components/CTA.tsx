@@ -116,7 +116,7 @@ const CTA = () => {
             <div className="flex justify-center mt-10">
                 <a
                     target="_blank"
-                    href="#"
+                    href="https://superprofile.bio/vp/standard-fashion"
                     className="inline-block px-10 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition shadow-lg"
                 >
                     Enroll in the Course
