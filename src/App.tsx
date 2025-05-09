@@ -1,10 +1,10 @@
 
 import AboutCourse from "./components/AboutCourse"
+import CTA from "./components/CTA"
 import CTASection from "./components/CTASection"
 import Header from "./components/Header"
 import HeroSection from "./components/HeroSection"
 import PreviewVideo from "./components/PreviewVideo"
-import WhatYouLearn from "./components/WhatYouLearn"
 
 
 function App() {
@@ -13,11 +13,12 @@ function App() {
     <>
     <main className="bg-black text-white font-body">
       <Header />
-      <HeroSection />
+      {/* <HeroSection /> */}
       <PreviewVideo  />
       <AboutCourse />
-      <WhatYouLearn />
-      <CTASection />
+      <CTA />
+      {/* <WhatYouLearn /> */}
+      {/* <CTASection /> */}
     </main>
     </>
   )
