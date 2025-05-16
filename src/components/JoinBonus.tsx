@@ -47,7 +47,7 @@ const JoinBonus = () => {
                 >
                     ജോയിൻ ചെയ്യുന്നതിലൂടെ അടുത്ത 1 Month ലേക്ക്<br />
                     നിങ്ങൾക്കുള്ള Costume Selection<br />
-                    <u>ഞങ്ങൾ ചെയ്ത തരുന്നുണ്ടായിരിക്കും..</u>
+                    <u className="text-yellow-400">ഞങ്ങൾ ചെയ്‌ത്‌ തരുന്നുണ്ടായിരിക്കും..</u>
                 </motion.h3>
 
                 <div className="relative w-full max-w-sm mx-auto aspect-[9/16] overflow-hidden rounded-xl shadow-lg">
