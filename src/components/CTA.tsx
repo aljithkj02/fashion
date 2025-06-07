@@ -80,8 +80,8 @@ const CTA = () => {
                     viewport={{ once: true }}
                     className="text-4xl font-extrabold"
                 >
-                    <span className="text-gray-500 line-through mr-3">₹4999</span>
-                    <span className="text-green-400">₹499</span>
+                    <span className="text-gray-500 line-through mr-3">₹1499</span>
+                    <span className="text-green-400">₹149</span>
                 </motion.div>
 
                 <motion.p
