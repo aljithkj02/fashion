@@ -26,7 +26,7 @@ const CtaButton = ({ children, className = '' }: { children: React.ReactNode; cl
     </motion.button>
 );
 
-
+ 
 const Landing = () => {
     const [videoKey, setVideoKey] = useState(0);
 
