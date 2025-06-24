@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, RotateCcw } from 'lucide-react';
+import BeforeAfter from '../assets/before.jpg'
+import NisaFashion from '../assets/nisa_fashion.mp4'
+import Nisa from '../assets/Nisa.jpg'
 
 // Helper component for animated sections
 const Section = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
@@ -106,7 +109,7 @@ const Landing = () => {
                                 {/* Before/After Image Demonstration */}
                                 <div className="relative rounded-lg shadow-2xl overflow-hidden aspect-[1/1] bg-slate-800">
                                     <img
-                                        src="https://res.cloudinary.com/dquq0mrkt/image/upload/v1746783647/IMG_0442_qvlrtz.jpg"
+                                        src={BeforeAfter}
                                         alt="Before fashion transformation"
                                         className="absolute top-0 left-0 h-full object-fit"
                                     />
@@ -176,9 +179,9 @@ const Landing = () => {
                             <video
                                 controls
                                 className="w-full h-full object-cover"
-                                poster="https://res.cloudinary.com/dquq0mrkt/image/upload/v1746788211/Reel_Cover_c02ruk.jpg"
+                                poster={Nisa}
                             >
-                                <source src="https://res.cloudinary.com/dquq0mrkt/video/upload/v1746607729/fashion_s3llhe.mp4" type="video/mp4" />
+                                <source src={NisaFashion} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
