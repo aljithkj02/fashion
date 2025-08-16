@@ -42,16 +42,16 @@ const Landing = () => {
         <div className="bg-slate-900 text-slate-200 font-sans leading-relaxed">
 
             {/* Header */}
-            <header className="sticky top-0 bg-slate-900 bg-opacity-80 backdrop-blur-md z-40 border-b border-white"
+            <header className="sticky top-0 bg-slate-900 bg-opacity-80 backdrop-blur-md z-40 border-b border-green-500"
                 style={{ background: `url(${BgHeader})`, objectFit: 'cover' }}
             >
                 <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                    <h1 className="text-2xl font-bold text-white tracking-wider">Standard Fashion</h1>
+                    <h1 className="text-2xl font-bold text-green-500 tracking-wider">Standard Fashion</h1>
 
                     {/* <a href="https://superprofile.bio/course/standard-fashion">
                         <CtaButton className="px-6 py-2 text-base cursor-pointer">Join Now</CtaButton>
                     </a> */}
-                    <Menu />
+                    <Menu className='text-green-500' />
                 </div>
             </header>
 
@@ -78,7 +78,7 @@ const Landing = () => {
                                     >
                                         നിങ്ങളുടെ Style Level, ഇനി Next Step-ലേക്ക്
                                     </p> */}
-                                    <p className="font-semibold tracking-wide text-white text-xl p-4 rounded-lg">
+                                    <p className="font-semibold baloo-chettan tracking-wide text-white text-xl p-4 rounded-lg border border-green-500">
                                         നിങ്ങളുടെ Style Level, ഇനി Next Step-ലേക്ക്
                                     </p>
                                 </div>
@@ -87,7 +87,7 @@ const Landing = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.4 }}
-                                    className="text-4xl md:text-6xl text-left font-extrabold text-white mb-6 leading-tight"
+                                    className="text-4xl gayathri-bold md:text-6xl text-left font-extrabold text-white mb-6 leading-tight"
                                 >
                                     {/* ആളുകൾ <span className="text-blue-400">തിരിഞ്ഞുനോക്കുന്ന</span>, നിനക്ക് ആത്മവിശ്വാസം തരുന്ന ഒരു പുത്തൻ സ്റ്റൈലിലേക്ക് മാറാം. */}
                                     {/* ആളുകൾ ശ്രദ്ധിക്കും, അവസരങ്ങൾ തേടിവരും. നിന്റെ സ്റ്റൈൽ ഒന്നു മാറ്റിയാൽ മതി. */}
@@ -96,7 +96,7 @@ const Landing = () => {
 
                                 <div className='mt-10'>
                                     <a href='https://superprofile.bio/course/standard-fashion'>
-                                        <CtaButton className='px-6 py-4 cursor-pointer'>Premium Group Join ചെയ്യൂ! <ArrowRight className="inline ml-1" /></CtaButton>
+                                        <CtaButton className='px-6 baloo-chettan py-4 cursor-pointer'>Premium Group Join ചെയ്യൂ! <ArrowRight className="inline ml-1" /></CtaButton>
                                     </a>
                                 </div>
 
@@ -105,7 +105,7 @@ const Landing = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.4 }}
-                                    className="text-xl mt-12 text-left font-extrabold text-white mb-6 leading-tight"
+                                    className="text-xl mt-12 baloo-chettan text-left font-bold text-white mb-6 leading-tight"
                                 >
                                     Group Join ചെയ്താൽ നിങ്ങൾക്കു കിട്ടുന്നത്:
                                 </motion.h2>
@@ -117,23 +117,23 @@ const Landing = () => {
                                     className="space-y-4 text-lg text-slate-300"
                                 >
                                     <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-start text-left">
-                                        <CheckCircle className="text-green-400 w-6 h-6 mr-3 mt-1 flex-shrink-0" />
+                                        <CheckCircle className="text-green-400 baloo-chettan w-6 h-6 mr-3 mt-1 flex-shrink-0" />
                                         Daily Outfit Links – online-ൽ best picks, budget മുതൽ premium വരെ
                                     </motion.li>
                                     <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-start text-left">
-                                        <CheckCircle className="text-green-400 w-6 h-6 mr-3 mt-1 flex-shrink-0" />
+                                        <CheckCircle className="text-green-400 baloo-chettan w-6 h-6 mr-3 mt-1 flex-shrink-0" />
                                         Practical Styling Tips – body type അനുസരിച്ചുള്ള perfect outfits.
                                     </motion.li>
                                     <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-start text-left">
-                                        <CheckCircle className="text-green-400 w-6 h-6 mr-3 mt-1 flex-shrink-0" />
+                                        <CheckCircle className="text-green-400 baloo-chettan w-6 h-6 mr-3 mt-1 flex-shrink-0" />
                                         Trend Alerts – India & Global fashion updates.
                                     </motion.li>
                                     <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-start text-left">
-                                        <CheckCircle className="text-green-400 w-6 h-6 mr-3 mt-1 flex-shrink-0" />
+                                        <CheckCircle className="text-green-400 baloo-chettan w-6 h-6 mr-3 mt-1 flex-shrink-0" />
                                         Recorded Fashion Classes FREE – ₹2,999 value!
                                     </motion.li>
                                     <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-start text-left">
-                                        <CheckCircle className="text-green-400 w-6 h-6 mr-3 mt-1 flex-shrink-0" />
+                                        <CheckCircle className="text-green-400 baloo-chettan w-6 h-6 mr-3 mt-1 flex-shrink-0" />
                                         Direct Q&A – fashion doubts-ന് quick answers.
                                     </motion.li>
                                 </motion.ul>
@@ -221,7 +221,7 @@ const Landing = () => {
                             </div>
                             <div className="mt-8">
                                 <a href="https://superprofile.bio/course/standard-fashion">
-                                    <CtaButton className='px-8 py-4 cursor-pointer'>
+                                    <CtaButton className='px-8 py-4 cursor-pointer '>
                                         Styling Secrets Unlock ചെയ്യൂ
                                     </CtaButton>
                                 </a>
@@ -264,30 +264,30 @@ const Landing = () => {
                     style={{ background: `url(${Bg})`, objectFit: 'cover' }}>
                     <Section>
                         <div className="container mx-auto px-6">
-                            <h3 className="text-center text-3xl md:text-4xl font-bold text-white mb-12">വെറും 3 സ്റ്റെപ്പിൽ നിന്റെ സ്റ്റൈൽ മാറ്റാം</h3>
+                            <h3 className="text-center baloo-chettan text-3xl md:text-4xl font-bold text-white mb-12">വെറും 3 സ്റ്റെപ്പിൽ നിന്റെ സ്റ്റൈൽ മാറ്റാം</h3>
                             <div className="grid md:grid-cols-3 gap-8 text-center">
                                 {/* Step 1 */}
                                 <div className="bg-transparent p-8 rounded-lg border-t-4 border-green-500 shadow-lg">
                                     <p className="text-5xl font-extrabold text-green-500 mb-4">01</p>
                                     <h4 className="text-2xl font-bold text-white mb-3">Join & Unlock</h4>
-                                    <p className="text-slate-400">ഇപ്പോൾ തന്നെ കോഴ്സിൽ ജോയിൻ ചെയ്യൂ, ഉടൻതന്നെ പാഠങ്ങൾ പഠിച്ചു തുടങ്ങാം. ഞങ്ങളുടെ പ്രീമിയം കമ്മ്യൂണിറ്റിയിലേക്കും നിനക്ക് പ്രവേശനം ലഭിക്കും.</p>
+                                    <p className="text-slate-400 baloo-chettan">ഇപ്പോൾ തന്നെ കോഴ്സിൽ ജോയിൻ ചെയ്യൂ, ഉടൻതന്നെ പാഠങ്ങൾ പഠിച്ചു തുടങ്ങാം. ഞങ്ങളുടെ പ്രീമിയം കമ്മ്യൂണിറ്റിയിലേക്കും നിനക്ക് പ്രവേശനം ലഭിക്കും.</p>
                                 </div>
                                 {/* Step 2 */}
                                 <div className="bg-transparent p-8 rounded-lg border-t-4 border-green-500 shadow-lg">
                                     <p className="text-5xl font-extrabold text-green-500 mb-4">02</p>
                                     <h4 className="text-2xl font-bold text-white mb-3">Learn & Practice</h4>
-                                    <p className="text-slate-400">നിന്റെ സൗകര്യത്തിനനുസരിച്ച് വീഡിയോകൾ കാണുക. സംശയങ്ങൾ ഞങ്ങളുടെ കമ്മ്യൂണിറ്റിയിൽ ചോദിക്കാം, പുതിയ കാര്യങ്ങൾ പഠിക്കാം.</p>
+                                    <p className="text-slate-400 baloo-chettan">നിന്റെ സൗകര്യത്തിനനുസരിച്ച് വീഡിയോകൾ കാണുക. സംശയങ്ങൾ ഞങ്ങളുടെ കമ്മ്യൂണിറ്റിയിൽ ചോദിക്കാം, പുതിയ കാര്യങ്ങൾ പഠിക്കാം.</p>
                                 </div>
                                 {/* Step 3 */}
                                 <div className="bg-transparent p-8 rounded-lg border-t-4 border-green-500 shadow-lg">
                                     <p className="text-5xl font-extrabold text-green-500 mb-4">03</p>
                                     <h4 className="text-2xl font-bold text-white mb-3">Impress & Succeed</h4>
-                                    <p className="text-slate-400">പുതിയ അറിവുകൾ നിന്റെ ജീവിതത്തിൽ കൊണ്ടുവാ. ആത്മവിശ്വാസത്തോടെ ആളുകളെ ഫേസ് ചെയ്യൂ, വിജയം നിന്റെ കൂടെ വരും.</p>
+                                    <p className="text-slate-400 baloo-chettan">പുതിയ അറിവുകൾ നിന്റെ ജീവിതത്തിൽ കൊണ്ടുവാ. ആത്മവിശ്വാസത്തോടെ ആളുകളെ ഫേസ് ചെയ്യൂ, വിജയം നിന്റെ കൂടെ വരും.</p>
                                 </div>
                             </div>
                             <div className="mt-16 text-center">
                                 <a href="https://superprofile.bio/course/standard-fashion">
-                                    <CtaButton className='px-6 py-4 cursor-pointer'>
+                                    <CtaButton className='px-6 py-4 cursor-pointer baloo-chettan'>
                                         Join ചെയ്ത്  FREE Classes നേടൂ
                                         <ArrowRight className="inline ml-0" />
                                     </CtaButton>
