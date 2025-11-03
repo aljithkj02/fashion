@@ -7,6 +7,10 @@ import Nisa from '../assets/Nisa.jpg'
 import Bg from '../assets/bg.jpeg'
 import BgHeader from '../assets/bg2.jpeg'
 
+
+// const CTA_URL = "https://superprofile.bio/course/standard-fashion";
+const CTA_URL = "https://chat.whatsapp.com/IaiWKmdLwre5xcwlIDtQTU?mode=ems_wa_t";
+
 // Helper component for animated sections
 const Section = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
     <motion.section
@@ -95,7 +99,7 @@ const Landing = () => {
                                 </motion.h2>
 
                                 <div className='mt-10'>
-                                    <a href='https://superprofile.bio/course/standard-fashion'>
+                                    <a href={CTA_URL}>
                                         <CtaButton className='px-6 baloo-chettan py-4 cursor-pointer'>Premium Group Join ചെയ്യൂ! <ArrowRight className="inline ml-1" /></CtaButton>
                                     </a>
                                 </div>
@@ -220,7 +224,7 @@ const Landing = () => {
                                 </video>
                             </div>
                             <div className="mt-8">
-                                <a href="https://superprofile.bio/course/standard-fashion">
+                                <a href={CTA_URL}>
                                     <CtaButton className='px-8 py-4 cursor-pointer '>
                                         Styling Secrets Unlock ചെയ്യൂ
                                     </CtaButton>
@@ -286,7 +290,7 @@ const Landing = () => {
                                 </div>
                             </div>
                             <div className="mt-16 text-center">
-                                <a href="https://superprofile.bio/course/standard-fashion">
+                                <a href={CTA_URL}>
                                     <CtaButton className='px-6 py-4 cursor-pointer baloo-chettan'>
                                         Join ചെയ്ത്  FREE Classes നേടൂ
                                         <ArrowRight className="inline ml-0" />
