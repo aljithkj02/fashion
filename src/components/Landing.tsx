@@ -1,15 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Menu } from 'lucide-react';
-// import BeforeAfter from '../assets/before.jpg'
+import { CheckCircle, ArrowRight, RotateCcw } from 'lucide-react';
+import BeforeAfter from '../assets/before.jpg'
 import NisaFashion from '../assets/nisa_fashion.mp4'
 import Nisa from '../assets/Nisa.jpg'
-import Bg from '../assets/bg.jpeg'
-import BgHeader from '../assets/bg2.jpeg'
-
-
-// const CTA_URL = "https://superprofile.bio/course/standard-fashion";
-const CTA_URL = "https://chat.whatsapp.com/IaiWKmdLwre5xcwlIDtQTU?mode=ems_wa_t";
 
 // Helper component for animated sections
 const Section = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
@@ -29,43 +23,36 @@ const CtaButton = ({ children, className = '' }: { children: React.ReactNode; cl
     <motion.button
         whileHover={{ scale: 1.05, boxShadow: "0px 10px 30px -5px rgba(59, 130, 246, 0.4)" }}
         whileTap={{ scale: 0.95 }}
-        className={`bg-green-700 text-white font-bold text-lg rounded-lg shadow-lg hover:bg-green-800 transition-colors duration-300 ${className}`}
+        className={`bg-blue-500 text-white font-bold text-lg rounded-lg shadow-lg hover:bg-blue-600 transition-colors duration-300 ${className}`}
     >
         {children}
     </motion.button>
 );
 
-
+ 
 const Landing = () => {
-    // const [videoKey, setVideoKey] = useState(0);
+    const [videoKey, setVideoKey] = useState(0);
 
-    // const handleReload = () => {
-    //     setVideoKey(prev => prev + 1); // Force re-render of iframe
-    // };
+    const handleReload = () => {
+        setVideoKey(prev => prev + 1); // Force re-render of iframe
+    };
     return (
         <div className="bg-slate-900 text-slate-200 font-sans leading-relaxed">
 
             {/* Header */}
-            <header className="sticky top-0 bg-slate-900 bg-opacity-80 backdrop-blur-md z-40 border-b border-green-500"
-                style={{ background: `url(${BgHeader})`, objectFit: 'cover' }}
-            >
+            <header className="sticky top-0 bg-slate-900 bg-opacity-80 backdrop-blur-md z-40">
                 <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                    <h1 className="text-2xl font-bold text-green-500 tracking-wider">Standard Fashion</h1>
+                    <h1 className="text-2xl font-bold text-white tracking-wider">Standard Fashion</h1>
 
-                    {/* <a href="https://superprofile.bio/course/standard-fashion">
+                    <a href="https://superprofile.bio/course/standard-fashion">
                         <CtaButton className="px-6 py-2 text-base cursor-pointer">Join Now</CtaButton>
-                    </a> */}
-                    <Menu className='text-green-500' />
+                    </a>
                 </div>
             </header>
 
-            <main
-            // style={{ background: `url(${Bg})`, objectFit: 'cover'}}
-            >
+            <main>
                 {/* Section 1: Hero */}
-                <section className="pt-10 md:pt-28 pb-16 md:pb-24 overflow-hidden"
-                    style={{ background: `url(${Bg})`, objectFit: 'cover' }}
-                >
+                <section className="pt-10 md:pt-28 pb-16 md:pb-24 overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="text-center md:text-left"><motion.div
@@ -74,16 +61,10 @@ const Landing = () => {
                                 transition={{ duration: 0.5, delay: 0.2 }}
                                 className="mb-4"
                             >
-                                <div className="inline-flex items-center gap-2 rounded-full  px-4 pb-2 text-sm ring-inset">
+                                <div className="inline-flex items-center gap-2 rounded-full bg-slate-800 px-4 py-2 text-sm ring-1 ring-inset ring-slate-700">
                                     {/* <PartyPopper className="h-5 w-5 text-blue-400" /> */}
-                                    {/* <p className="font-semibold text-xl"
-                                    
-                                        style={{background: "linear-gradient(to bottom, #1A662E 0%, #4BB058 50%, #FFFFFF 100%);"}}
-                                    >
-                                        നിങ്ങളുടെ Style Level, ഇനി Next Step-ലേക്ക്
-                                    </p> */}
-                                    <p className="font-semibold baloo-chettan tracking-wide text-white text-xl p-4 rounded-lg border border-green-500">
-                                        നിങ്ങളുടെ Style Level, ഇനി Next Step-ലേക്ക്
+                                    <p className="font-semibold tracking-wide text-blue-400">
+                                        നിന്റെ സ്റ്റൈൽ മാറ്റാൻ ഇതിലും നല്ലൊരു സ്ഥലം വേറെയില്ല.
                                     </p>
                                 </div>
                             </motion.div>
@@ -91,64 +72,41 @@ const Landing = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.4 }}
-                                    className="text-4xl gayathri-bold md:text-6xl text-left font-extrabold text-white mb-6 leading-tight"
+                                    className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight"
                                 >
                                     {/* ആളുകൾ <span className="text-blue-400">തിരിഞ്ഞുനോക്കുന്ന</span>, നിനക്ക് ആത്മവിശ്വാസം തരുന്ന ഒരു പുത്തൻ സ്റ്റൈലിലേക്ക് മാറാം. */}
-                                    {/* ആളുകൾ ശ്രദ്ധിക്കും, അവസരങ്ങൾ തേടിവരും. നിന്റെ സ്റ്റൈൽ ഒന്നു മാറ്റിയാൽ മതി. */}
-                                    Daily outfits, styling secrets, trend updates - എല്ലാം നേരിട്ട് നിങ്ങളുടെ WhatsApp ലേക്ക്
-                                </motion.h2>
-
-                                <div className='mt-10'>
-                                    <a href={CTA_URL}>
-                                        <CtaButton className='px-6 baloo-chettan py-4 cursor-pointer'>Premium Group Join ചെയ്യൂ! <ArrowRight className="inline ml-1" /></CtaButton>
-                                    </a>
-                                </div>
-
-
-                                <motion.h2
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: 0.4 }}
-                                    className="text-xl mt-12 baloo-chettan text-left font-bold text-white mb-6 leading-tight"
-                                >
-                                    Group Join ചെയ്താൽ നിങ്ങൾക്കു കിട്ടുന്നത്:
+                                    ആളുകൾ ശ്രദ്ധിക്കും, അവസരങ്ങൾ തേടിവരും. നിന്റെ സ്റ്റൈൽ ഒന്നു മാറ്റിയാൽ മതി.
                                 </motion.h2>
 
                                 <motion.ul
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ staggerChildren: 0.2, delayChildren: 0.6 }}
-                                    className="space-y-4 text-lg text-slate-300"
+                                    className="space-y-4 mb-8 text-lg text-slate-300"
                                 >
                                     <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-start text-left">
-                                        <CheckCircle className="text-green-400 baloo-chettan w-6 h-6 mr-3 mt-1 flex-shrink-0" />
-                                        Daily Outfit Links – online-ൽ best picks, budget മുതൽ premium വരെ
+                                        <CheckCircle className="text-green-400 w-6 h-6 mr-3 mt-1 flex-shrink-0" />
+                                        <span>ഏത് ഡ്രസ്സ്‌ എവിടെ ഇടണം എന്ന് ആലോചിച്ച് ഇനി <strong className="text-white">തല പുകയ്‌ക്കേണ്ട.</strong></span>
                                     </motion.li>
                                     <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-start text-left">
-                                        <CheckCircle className="text-green-400 baloo-chettan w-6 h-6 mr-3 mt-1 flex-shrink-0" />
-                                        Practical Styling Tips – body type അനുസരിച്ചുള്ള perfect outfits.
+                                        <CheckCircle className="text-green-400 w-6 h-6 mr-3 mt-1 flex-shrink-0" />
+                                        <span>വലിയ വില കൊടുക്കാതെ <strong className="text-white">നിന്റെ ലുക്ക്</strong> എങ്ങനെ അടിപൊളിയാക്കാം എന്ന് പഠിക്കാം.</span>
                                     </motion.li>
                                     <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-start text-left">
-                                        <CheckCircle className="text-green-400 baloo-chettan w-6 h-6 mr-3 mt-1 flex-shrink-0" />
-                                        Trend Alerts – India & Global fashion updates.
-                                    </motion.li>
-                                    <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-start text-left">
-                                        <CheckCircle className="text-green-400 baloo-chettan w-6 h-6 mr-3 mt-1 flex-shrink-0" />
-                                        Recorded Fashion Classes FREE – ₹2,999 value!
-                                    </motion.li>
-                                    <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-start text-left">
-                                        <CheckCircle className="text-green-400 baloo-chettan w-6 h-6 mr-3 mt-1 flex-shrink-0" />
-                                        Direct Q&A – fashion doubts-ന് quick answers.
+                                        <CheckCircle className="text-green-400 w-6 h-6 mr-3 mt-1 flex-shrink-0" />
+                                        <span>നിന്റെ ബഡ്ജറ്റിൽ നിന്നുകൊണ്ട് തന്നെ ഒരു <strong className="text-white">സ്റ്റൈൽ ഐക്കൺ</strong> ആകാം.</span>
                                     </motion.li>
                                 </motion.ul>
+
                             </div>
 
-                            {/* <motion.div
+                            <motion.div
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
                                 className="relative w-full max-w-md mx-auto md:max-w-none"
                             >
+                                {/* Before/After Image Demonstration */}
                                 <div className="relative rounded-lg shadow-2xl overflow-hidden aspect-[1/1] bg-slate-800">
                                     <img
                                         src={BeforeAfter}
@@ -159,18 +117,22 @@ const Landing = () => {
 
                                 <div className="flex flex-col items-center md:items-start mt-6">
                                     <a href='https://superprofile.bio/course/standard-fashion'>
-                                        <CtaButton className='px-6 py-4 cursor-pointer'>Premium Member ആകൂ <ArrowRight className="inline ml-1" /></CtaButton>
+                                        <CtaButton className='px-6 py-4 cursor-pointer'>എന്റെ സ്റ്റൈൽ മാറ്റാൻ ഞാൻ റെഡി! <ArrowRight className="inline ml-1" /></CtaButton>
                                     </a>
+                                    <p className="mt-4 text-sm text-slate-500">നിനക്ക് വേണ്ടി നീ എടുക്കുന്ന ഏറ്റവും മികച്ച തീരുമാനം.</p>
                                 </div>
-                            </motion.div> */}
+                            </motion.div>
                         </div>
                     </div>
                 </section>
 
                 {/* Section 2: The "Why" Video */}
-                {/* <Section className="bg-black bg-opacity-20">
+                <Section className="bg-black bg-opacity-20">
                     <div className="container mx-auto px-6 text-center">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                            {/* നീ അറിയാതെ പോകുന്ന ഈ ഫാഷൻ അബദ്ധങ്ങൾ <br className="hidden md:block" />
+                            <span className="text-blue-400">നിന്റെ ലുക്ക് നശിപ്പിക്കുന്നുണ്ടോ?</span> */}
+
                             99% പുരുഷന്മാരും ഈ ഫാഷൻ തെറ്റുകൾ കാരണം <br className="hidden md:block" />
                             <span className="text-blue-400">നല്ല അവസരങ്ങൾ നഷ്ടപ്പെടുത്തുന്നു.</span>
                         </h3>
@@ -194,48 +156,45 @@ const Landing = () => {
                                 <RotateCcw className="w-5 h-5" />
                             </button>
                         </div>
-                        
                         <div className="mt-8">
                             <a href="https://superprofile.bio/course/standard-fashion">
-                                <CtaButton className='px-8 py-4 cursor-pointer'>Premium Member ആകൂ</CtaButton>
+                                <CtaButton className='px-8 py-4 cursor-pointer'>എന്റെ തെറ്റുകൾ തിരുത്തണം</CtaButton>
                             </a>
                         </div>
                     </div>
-                </Section> */}
+                </Section>
 
                 {/* Section 3: The "Girl's Perspective" Video */}
-                <div
-                    style={{ background: `url(${Bg})`, objectFit: 'cover' }}>
-                    <Section>
-                        <div className="container mx-auto px-6 text-center">
-                            {/* <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                                ഞങ്ങൾ പെൺകുട്ടികൾ തുറന്നുപറയാൻ മടിക്കുന്ന ആ രഹസ്യം : <br className="hidden md:block" />
-                                <span className="text-blue-400">നിങ്ങളുടെ Dress കൊള്ളാം, പക്ഷെ...</span>
-                            </h3> */}
+                <Section>
+                    <div className="container mx-auto px-6 text-center">
+                        <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                            {/* ഒരു പെൺകുട്ടിയുടെ കണ്ണിൽ, എന്താണ് യഥാർത്ഥ സ്റ്റൈൽ?<br className="hidden md:block" />
+                            <span className="text-blue-400 text-2xl">(Hint: അത് വിലകൂടിയ ഷർട്ടും ഷൂസും അല്ല!)</span> */}
 
-                            <div className="max-w-[375px] w-full mx-auto aspect-[9/14] rounded-xl overflow-hidden shadow-lg">
-                                <video
-                                    controls
-                                    className="w-full h-full object-cover"
-                                    poster={Nisa}
-                                >
-                                    <source src={NisaFashion} type="video/mp4" />
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div className="mt-8">
-                                <a href={CTA_URL}>
-                                    <CtaButton className='px-8 py-4 cursor-pointer '>
-                                        Styling Secrets Unlock ചെയ്യൂ
-                                    </CtaButton>
-                                </a>
-                            </div>
+                            ഞങ്ങൾ പെൺകുട്ടികൾ തുറന്നുപറയാൻ മടിക്കുന്ന ആ രഹസ്യം : <br className="hidden md:block" />
+                            <span className="text-blue-400">നിങ്ങളുടെ Dress കൊള്ളാം, പക്ഷെ...</span>
+                        </h3>
+
+                        <div className="max-w-[375px] w-full mx-auto aspect-[9/14] rounded-xl overflow-hidden shadow-lg">
+                            <video
+                                controls
+                                className="w-full h-full object-cover"
+                                poster={Nisa}
+                            >
+                                <source src={NisaFashion} type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
-                    </Section>
-                </div>
+                        <div className="mt-8">
+                            <a href="https://superprofile.bio/course/standard-fashion">
+                                <CtaButton className='px-8 py-4 cursor-pointer'>ഈ രഹസ്യം എനിക്കറിയണം</CtaButton>
+                            </a>
+                        </div>
+                    </div>
+                </Section>
 
                 {/* Section 4: Reasons to Join */}
-                {/* <Section className="bg-black bg-opacity-20">
+                <Section className="bg-black bg-opacity-20">
                     <div className="container mx-auto px-6">
                         <h3 className="text-center text-3xl md:text-4xl font-bold text-white mb-12">എന്തുകൊണ്ട് നീ ഈ കോഴ്സിൽ ഇപ്പോൾ ചേരണം?</h3>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -261,46 +220,40 @@ const Landing = () => {
                             ))}
                         </div>
                     </div>
-                </Section> */}
+                </Section>
 
                 {/* Section 5: How It Works */}
-                <div
-                    style={{ background: `url(${Bg})`, objectFit: 'cover' }}>
-                    <Section>
-                        <div className="container mx-auto px-6">
-                            <h3 className="text-center baloo-chettan text-3xl md:text-4xl font-bold text-white mb-12">വെറും 3 സ്റ്റെപ്പിൽ നിന്റെ സ്റ്റൈൽ മാറ്റാം</h3>
-                            <div className="grid md:grid-cols-3 gap-8 text-center">
-                                {/* Step 1 */}
-                                <div className="bg-transparent p-8 rounded-lg border-t-4 border-green-500 shadow-lg">
-                                    <p className="text-5xl font-extrabold text-green-500 mb-4">01</p>
-                                    <h4 className="text-2xl font-bold text-white mb-3">Join & Unlock</h4>
-                                    <p className="text-slate-400 baloo-chettan">ഇപ്പോൾ തന്നെ കോഴ്സിൽ ജോയിൻ ചെയ്യൂ, ഉടൻതന്നെ പാഠങ്ങൾ പഠിച്ചു തുടങ്ങാം. ഞങ്ങളുടെ പ്രീമിയം കമ്മ്യൂണിറ്റിയിലേക്കും നിനക്ക് പ്രവേശനം ലഭിക്കും.</p>
-                                </div>
-                                {/* Step 2 */}
-                                <div className="bg-transparent p-8 rounded-lg border-t-4 border-green-500 shadow-lg">
-                                    <p className="text-5xl font-extrabold text-green-500 mb-4">02</p>
-                                    <h4 className="text-2xl font-bold text-white mb-3">Learn & Practice</h4>
-                                    <p className="text-slate-400 baloo-chettan">നിന്റെ സൗകര്യത്തിനനുസരിച്ച് വീഡിയോകൾ കാണുക. സംശയങ്ങൾ ഞങ്ങളുടെ കമ്മ്യൂണിറ്റിയിൽ ചോദിക്കാം, പുതിയ കാര്യങ്ങൾ പഠിക്കാം.</p>
-                                </div>
-                                {/* Step 3 */}
-                                <div className="bg-transparent p-8 rounded-lg border-t-4 border-green-500 shadow-lg">
-                                    <p className="text-5xl font-extrabold text-green-500 mb-4">03</p>
-                                    <h4 className="text-2xl font-bold text-white mb-3">Impress & Succeed</h4>
-                                    <p className="text-slate-400 baloo-chettan">പുതിയ അറിവുകൾ നിന്റെ ജീവിതത്തിൽ കൊണ്ടുവാ. ആത്മവിശ്വാസത്തോടെ ആളുകളെ ഫേസ് ചെയ്യൂ, വിജയം നിന്റെ കൂടെ വരും.</p>
-                                </div>
+                <Section>
+                    <div className="container mx-auto px-6">
+                        <h3 className="text-center text-3xl md:text-4xl font-bold text-white mb-12">വെറും 3 സ്റ്റെപ്പിൽ നിന്റെ സ്റ്റൈൽ മാറ്റാം</h3>
+                        <div className="grid md:grid-cols-3 gap-8 text-center">
+                            {/* Step 1 */}
+                            <div className="bg-slate-800 p-8 rounded-lg border-t-4 border-blue-500 shadow-lg">
+                                <p className="text-5xl font-extrabold text-blue-500 mb-4">01</p>
+                                <h4 className="text-2xl font-bold text-white mb-3">Join & Unlock</h4>
+                                <p className="text-slate-400">ഇപ്പോൾ തന്നെ കോഴ്സിൽ ജോയിൻ ചെയ്യൂ, ഉടൻതന്നെ പാഠങ്ങൾ പഠിച്ചു തുടങ്ങാം. ഞങ്ങളുടെ പ്രീമിയം കമ്മ്യൂണിറ്റിയിലേക്കും നിനക്ക് പ്രവേശനം ലഭിക്കും.</p>
                             </div>
-                            <div className="mt-16 text-center">
-                                <a href={CTA_URL}>
-                                    <CtaButton className='px-6 py-4 cursor-pointer baloo-chettan'>
-                                        Join ചെയ്ത്  FREE Classes നേടൂ
-                                        <ArrowRight className="inline ml-0" />
-                                    </CtaButton>
-                                </a>
-                                {/* <p className="mt-4 text-sm text-slate-500">ഒരു സിനിമ ടിക്കറ്റിന്റെ വിലയ്ക്ക് നിന്റെ ആത്മവിശ്വാസം കൂട്ടാം.</p> */}
+                            {/* Step 2 */}
+                            <div className="bg-slate-800 p-8 rounded-lg border-t-4 border-blue-500 shadow-lg">
+                                <p className="text-5xl font-extrabold text-blue-500 mb-4">02</p>
+                                <h4 className="text-2xl font-bold text-white mb-3">Learn & Practice</h4>
+                                <p className="text-slate-400">നിന്റെ സൗകര്യത്തിനനുസരിച്ച് വീഡിയോകൾ കാണുക. സംശയങ്ങൾ ഞങ്ങളുടെ കമ്മ്യൂണിറ്റിയിൽ ചോദിക്കാം, പുതിയ കാര്യങ്ങൾ പഠിക്കാം.</p>
+                            </div>
+                            {/* Step 3 */}
+                            <div className="bg-slate-800 p-8 rounded-lg border-t-4 border-blue-500 shadow-lg">
+                                <p className="text-5xl font-extrabold text-blue-500 mb-4">03</p>
+                                <h4 className="text-2xl font-bold text-white mb-3">Impress & Succeed</h4>
+                                <p className="text-slate-400">പുതിയ അറിവുകൾ നിന്റെ ജീവിതത്തിൽ കൊണ്ടുവാ. ആത്മവിശ്വാസത്തോടെ ആളുകളെ ഫേസ് ചെയ്യൂ, വിജയം നിന്റെ കൂടെ വരും.</p>
                             </div>
                         </div>
-                    </Section>
-                </div>
+                        <div className="mt-16 text-center">
+                            <a href="https://superprofile.bio/course/standard-fashion">
+                                <CtaButton className='px-6 py-4 cursor-pointer'>എനിക്ക് ഇപ്പോൾ തന്നെ തുടങ്ങണം <ArrowRight className="inline ml-0" /></CtaButton>
+                            </a>
+                            <p className="mt-4 text-sm text-slate-500">ഒരു സിനിമ ടിക്കറ്റിന്റെ വിലയ്ക്ക് നിന്റെ ആത്മവിശ്വാസം കൂട്ടാം.</p>
+                        </div>
+                    </div>
+                </Section>
             </main>
 
             {/* Footer */}
